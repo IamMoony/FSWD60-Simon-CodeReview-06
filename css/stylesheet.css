@@ -1,6 +1,9 @@
 div {
 	border: 1px solid red;
 }
+body {
+	margin-top: 80px;
+}
 
 .images img {
 	width: 200px;
