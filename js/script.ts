@@ -31,7 +31,7 @@ class places extends locations {
   		<div class="media-left">
   		<hr>
     	<a href="#">
-      	<img class="media-object" src="${this.image}">
+      	<img class="media-object d-sm-none d-md-block" src="${this.image}">
     	</a>
     	<hr>
   		</div>

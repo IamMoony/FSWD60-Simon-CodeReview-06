@@ -9,6 +9,17 @@ body {
 .jumbotron {
 	background-image: url('../img/travel2.jpg');
 	background-size: 100%;
+
+}
+
+.jumbotron h1, p{
+	color: white;
+	
+}
+
+.jumbotron p{
+	color: white;
+	
 }
 
 .media-left img:hover {
@@ -52,13 +63,14 @@ body {
 }
 
 .cf-logo {
-	width: 50%;
+	width: 30%;
 }
 
 .page-footer {
+	margin-top: 30px;
 	background-color: #B1A296;
 	border: 0px solid white;
-	border-radius: 5px;
+	border-radius: 3px;
 }
 
 .page-footer li, a, h5, ul, p {
@@ -66,12 +78,6 @@ body {
 }
 
 hr {
-    /* height: 2px; */
    background-color: : #DAAD86;
 }
 
-@media and screen (max-width: 450px) {
-    img {
-        border: 0px;
-    }
-}

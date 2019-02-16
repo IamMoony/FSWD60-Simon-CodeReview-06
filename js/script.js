@@ -30,7 +30,7 @@ var places = /** @class */ (function (_super) {
         return _super.call(this, name, city, zipcode, address, image) || this;
     }
     places.prototype.render = function () {
-        return "\n\t\t" + _super.prototype.render.call(this) + "\n\t\t<div class=\"media col-lg-3 col-md-6 col-sm-12\">\n  \t\t<div class=\"media-left\">\n  \t\t<hr>\n    \t<a href=\"#\">\n      \t<img class=\"media-object\" src=\"" + this.image + "\">\n    \t</a>\n    \t<hr>\n  \t\t</div>\n  \t\t<div class=\"media-body col-lg-12 col-md-1 col-sm-12 media-text\">\n    \t<h4 class=\"media-heading media-text\">" + this.name + "</h4>\n    \t<p><b>City:</b> " + this.city + "</p>\n    \t<p><b>ZIP-Code:</b> " + this.zipcode + "</p>\n    \t<p><b>Address:</b> <br>" + this.address + "</p>\n    \t<hr>\n  \t\t</div>\n\t\t</div>\n\t\t";
+        return "\n\t\t" + _super.prototype.render.call(this) + "\n\t\t<div class=\"media col-lg-3 col-md-6 col-sm-12\">\n  \t\t<div class=\"media-left\">\n  \t\t<hr>\n    \t<a href=\"#\">\n      \t<img class=\"media-object d-sm-none d-md-block\" src=\"" + this.image + "\">\n    \t</a>\n    \t<hr>\n  \t\t</div>\n  \t\t<div class=\"media-body col-lg-12 col-md-1 col-sm-12 media-text\">\n    \t<h4 class=\"media-heading media-text\">" + this.name + "</h4>\n    \t<p><b>City:</b> " + this.city + "</p>\n    \t<p><b>ZIP-Code:</b> " + this.zipcode + "</p>\n    \t<p><b>Address:</b> <br>" + this.address + "</p>\n    \t<hr>\n  \t\t</div>\n\t\t</div>\n\t\t";
     };
     return places;
 }(locations));
