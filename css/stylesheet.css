@@ -81,3 +81,16 @@ hr {
    background-color: : #DAAD86;
 }
 
+/* Media */
+/* Remove border on small col size */
+@media (max-width:780px) {
+
+      .media-left img 
+      {
+        border:0px solid !important;
+        display: none;
+        }
+
+
+      }
+
