@@ -40,6 +40,7 @@ class places extends locations {
     	<p>City: ${this.city}</p>
     	<p>ZIP-Code: ${this.zipcode}</p>
     	<p>Address: <br>${this.address}</p>
+    	<hr>
   		</div>
 		</div>
 		`
@@ -77,6 +78,7 @@ class restaurant extends locations{
     	<p>Tel.:${this.tel}</p>
     	<p>Type: ${this.type}</p>
     	<p>Website: <a href="${this.website}"$</a></p>
+    	<hr>
   		</div>
 		</div>
 		`
@@ -111,7 +113,7 @@ class events extends locations{
     	<p>ZIP-Code: ${this.zipcode}</p>
     	<p>Address: <br>${this.address}</p>
     	<p>Date: ${this.eventdate}</p>
-    	<p>Price: ${this.ticketprice}</p>
+    	<p>Price: ${this.ticketprice} $</p>
   		</div>
 		</div>
 		`
@@ -154,9 +156,9 @@ var eventData = new Array();
 // (name, city, zipcode, address, image, eventdate, ticketprice) --> 7 arguments
 eventData[0] = new events("Lenny Kravitz", "Vienna, Austria", 1150, "Roland-Rainer-Platz 1", "img/lenny.jpg", "13th May, 2019", 60)
 eventData[1] = new events("Tomorrowland", "Boom, Belgium", 2850, "Kapelstraat 83", "img/tomorrowland.jpg", "19th July - 28th July, 2019", 100)
-eventData[2] = new events("Donauinselfest", "Vienna, Austria", 1220, "Donauinsel", "img/donauinselfest.jpg", "22th June - 24th June, 2019", "Free")
+eventData[2] = new events("Donauinselfest", "Vienna, Austria", 1220, "Donauinsel", "img/donauinselfest.jpg", "22th June - 24th June, 2019", 0)
 eventData[3] = new events("Alpaka Expo", "Graz, Austria", 8010, "Messeturm, Messeplatz 1", "img/alpaka.png", "15th Feb - 17th Feb, 2019", 20)
-
+// Data end
 
 function drawContentPlaces() {
 	for (let index in placesData) {
@@ -177,10 +179,6 @@ function drawContentEvents() {
 }
 
 
-
-// function drawContentRestaurants () {
-
-	// }
 
 	drawContentPlaces();
 	drawContentRestaurants();
