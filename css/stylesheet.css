@@ -21,6 +21,9 @@ body {
 	color: white;
 	
 }
+.navbar-cont {
+	background-color: lightgrey;
+}
 
 .media-left img:hover {
     transform: scale(1.08);
@@ -90,7 +93,5 @@ hr {
         border:0px solid !important;
         display: none;
         }
-
-
       }
 

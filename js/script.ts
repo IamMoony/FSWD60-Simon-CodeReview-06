@@ -160,6 +160,7 @@ eventData[2] = new events("Donauinselfest", "Vienna, Austria", 1220, "Donauinsel
 eventData[3] = new events("Alpaka Expo", "Graz, Austria", 8010, "Messeturm, Messeplatz 1", "img/alpaka.png", "15th Feb - 17th Feb, 2019", 20)
 // Data end
 
+//Draw the content with these 3 functions
 function drawContentPlaces() {
 	for (let index in placesData) {
 		document.getElementById("places").innerHTML += placesData[index].render();

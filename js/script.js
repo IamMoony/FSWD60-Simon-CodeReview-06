@@ -92,6 +92,7 @@ eventData[1] = new events("Tomorrowland", "Boom, Belgium", 2850, "Kapelstraat 83
 eventData[2] = new events("Donauinselfest", "Vienna, Austria", 1220, "Donauinsel", "img/donauinselfest.jpg", "22th June - 24th June, 2019", 0);
 eventData[3] = new events("Alpaka Expo", "Graz, Austria", 8010, "Messeturm, Messeplatz 1", "img/alpaka.png", "15th Feb - 17th Feb, 2019", 20);
 // Data end
+//Draw the content with these 3 functions
 function drawContentPlaces() {
     for (var index in placesData) {
         document.getElementById("places").innerHTML += placesData[index].render();
