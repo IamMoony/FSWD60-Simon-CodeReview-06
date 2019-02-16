@@ -3,11 +3,25 @@ div {
 }
 body {
 	margin-top: 80px;
+	background-color: lightgreen;
 }
 
 img {
 	width: 100%;
 	height: 250px;
+	margin: 0px;
 }
+
+.media-text {
+	padding-top: 20px;
+}
+
+#places {
+	display: flex;
+	justify-content: space-around;
+	vertical-align: center;
+}
+
+
 
 

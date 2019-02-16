@@ -28,16 +28,16 @@ class places extends locations {
 		return `
 		${super.render()}
 		<div class="media col-lg-3">
-  		<div class="media-left ">
+  		<div class="media-left">
     	<a href="#">
       	<img class="media-object" src="${this.image}" alt="...">
     	</a>
   		</div>
-  		<div class="media-body col-lg-1">
-    	<h4 class="media-heading">${this.name}</h4>
+  		<div class="media-body col-lg-3 media-text">
+    	<h4 class="media-heading media-text">${this.name}</h4>
     	<p>City: ${this.city}</p>
     	<p>ZIP-Code: ${this.zipcode}</p>
-    	<p>Address: ${this.address}</p>
+    	<p>Address: <br>${this.address}</p>
   		</div>
 		</div>
 		`
@@ -66,7 +66,7 @@ class restaurant extends locations{
     	</a>
   		</div>
   		<div class="media-body col-lg-1">
-    	<h4 class="media-heading">${this.name}</h4>
+    	<h4 class="media-heading media-text">${this.name}</h4>
     	<p>City: ${this.city}</p>
     	<p>ZIP-Code: ${this.zipcode}</p>
     	<p>Address: ${this.address}</p>
@@ -100,10 +100,10 @@ class events extends locations{
     	</a>
   		</div>
   		<div class="media-body col-lg-1">
-    	<h4 class="media-heading">${this.name}</h4>
+    	<h4 class="media-heading media-text">${this.name}</h4>
     	<p>City: ${this.city}</p>
     	<p>ZIP-Code: ${this.zipcode}</p>
-    	<p>Address: ${this.address}</p>
+    	<p>Address: <br>${this.address}</p>
     	<p>Date: ${this.eventdate}</p>
     	<p>Price: ${this.ticketprice}</p>
   		</div>
@@ -138,7 +138,7 @@ placesData[3] = new places("Broadway Theatre", "New York City",  10036, "Theater
 
 var restaurantData = new Array();
 // (name, city, zipcode, address, image, tel, type, website) --> 8 arugments
-restaurantData[0] = new restaurant("DO & CO Restaurant Stephansplatz", "Vienna, Austria", 1010, "Stephansplatz 12", "img/doco.jpg", "01 5353969", "Luxury", "www.docohotel.com/de/restaurant")
+restaurantData[0] = new restaurant("DO & CO Restaurant", "Vienna, Austria", 1010, "Stephansplatz 12", "img/doco.jpg", "01 5353969", "Luxury", "www.docohotel.com/de/restaurant")
 restaurantData[1] = new restaurant("TGI Fridays", "Vienna, Austria", 1010, "Schubertring 13", "img/tgi.jpg", " 01 7148995", "Fast Food", "www.tgifridays.at/")
 restaurantData[2] = new restaurant("La Rive", "Amsterdam, Netherlands", 1018, "Professor Tulpplein 1", "img/rive.jpg", "+31 20 520 3264", "Upper Class", "www.restaurantlarive.nl")
 restaurantData[3] = new restaurant("Schweizerhaus", "Vienna, Austria", 1020, "Prater 116", "img/schweizerhaus.jpg", "01 7148995", "Traditional Austrian Food", "www.schweizerhaus.at")
