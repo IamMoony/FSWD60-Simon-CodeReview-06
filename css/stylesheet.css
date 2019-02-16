@@ -5,8 +5,8 @@ body {
 	margin-top: 80px;
 }
 
-.images img {
-	width: 250px;
+img {
+	width: 100%;
 	height: 250px;
 }
 

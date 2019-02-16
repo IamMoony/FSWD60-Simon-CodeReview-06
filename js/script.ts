@@ -27,14 +27,22 @@ class places extends locations {
 	render(){
 		return `
 		${super.render()}
-		<div class="row">
-		<div class="col-lg-6 images">
-		<img src="${this.image}">
+		<div class="col-lg-12">
+		<div class="media">
+		<div class="media-left col-lg-3">
+		<a href="#">
+		<img class="media-object" src="${this.image}">
+		</a>
 		</div>
-		<div class="col-lg-6 desciption">
-		<p>City: ${this.city}</p>
-		<p>ZIP-code: ${this.zipcode}</p>
-		<p>Address: ${this.address}</p>`
+		<div class="media-body col-lg-2>"
+		<h5 class="media-heading">${this.name}</5>
+		<p>City:${this.city}</p>
+		<p>ZIP-code:${this.zipcode}</p>
+		<p>Address:${this.address}</p>
+		</div>
+		</div>
+		</div>
+		`
 	}
 }
 
@@ -48,17 +56,16 @@ class restaurant extends locations{
 		this.tel = tel;
 		this.type = type;
 		this.website = website;
-}
+	}
 
 	render(){
 		return `
 		${super.render()}
-		<div class="row">
-		<div class="col-lg-6 images">
+		<div class="col-lg-12">
+		<div class="col-lg-2 images">
 		<h1>${this.name}</h1>
 		<img src="${this.image}">
-		</div>
-		<div class="col-lg-6 desciption">
+		<div class="col-lg-12 desciption">
 		<p>City: ${this.city}</p>
 		<p>ZIP-code: ${this.zipcode}</p>
 		<p>Address: ${this.address}</p>
@@ -66,6 +73,8 @@ class restaurant extends locations{
 		<p>Type: ${this.type}</p>
 		<p>Url:  ${this.website}</p>
 		</div>
+		</div>
+		
 		</div>
 		`
 	}
@@ -80,16 +89,16 @@ class events extends locations{
 		super(name, city, zipcode, address, image, eventdate, ticketprice);
 		this.eventdate = eventdate;
 		this.ticketprice = ticketprice;
-}
+	}
 
-render(){
-	return `
+	render(){
+		return `
 		${super.render()}
 		<div class="row">
-		<div class="col-lg-6 images">
+		<div class="col-lg-2 images">
 		<img src="${this.image}">
 		</div>
-		<div class="col-lg-6 desciption">
+		<div class="col-lg-2 desciption">
 		<p>City: ${this.city}</p>
 		<p>ZIP-code: ${this.zipcode}</p>
 		<p>Address: ${this.address}</p>
@@ -128,27 +137,38 @@ placesData[3] = new places("Broadway Theatre", "New York City",  10036, "Theater
 var restaurantData = new Array();
 // name, city, zipcode, address, image, tel, type, website
 restaurantData[0] = new restaurant("DO & CO Restaurant Stephansplatz", "Vienna, Austria", 1010, "Stephansplatz 12", "img/doco.jpg", "01 5353969", "Luxury", "https://www.docohotel.com/de/restaurant")
-restaurantData[0] = new restaurant("TGI Fridays", "Vienna, Austria", 1010, "Schubertring 13", "img/tgi.jpg", " 01 7148995", "Fast Food", "http://tgifridays.at/")
-restaurantData[0] = new restaurant("DO & CO Restaurant Stephansplatz", "Vienna, Austria", 1010, "Stephansplatz 12", "img/doco.jpg", "015353969", "Allround", "https://www.docohotel.com/de/restaurant")
-restaurantData[0] = new restaurant("DO & CO Restaurant Stephansplatz", "Vienna, Austria", 1010, "Stephansplatz 12", "img/doco.jpg", "015353969", "Allround", "https://www.docohotel.com/de/restaurant")
+restaurantData[1] = new restaurant("TGI Fridays", "Vienna, Austria", 1010, "Schubertring 13", "img/tgi.jpg", " 01 7148995", "Fast Food", "http://tgifridays.at/")
+restaurantData[2] = new restaurant("La Rive", "Amsterdam, Netherlands", 1018, "Professor Tulpplein 1", "img/rive.jpg", "+31 20 520 3264", "Upper Class", "https://www.restaurantlarive.nl/nl/")
+restaurantData[3] = new restaurant("Schweizerhaus", "Vienna, Austria", 1020, "Prater 116", "img/schweizerhaus.jpg", "01 7148995", "Traditional Austrian Food", "https://www.http://tgifridays.at/")
 
 var eventData = new Array();
 
 // (name, city, zipcode, address, image, eventdate, ticketprice)
-eventData[0] = new events("")
+eventData[0] = new events("Lenny Kravitz", "Vienna, Austria", 1150, "Roland-Rainer-Platz 1", "img/lenny.jpg", "13th May, 2019", 60)
+eventData[1] = new events("Tomorrowland", "Boom, Belgium", 2850, "Kapelstraat 83", "img/lenny.jpg", "19th July - 28th July, 2019, 2019", 100)
+eventData[2] = new events("Donauinselfest", "Vienna, Austria", 1220, "Donauinsel", "img/donauinselfest.jpg", "22th June - 24th June, 2019", "Free")
+eventData[3] = new events("Alpaka Expo", "Graz, Austria", 8010, "Messeturm, Messeplatz 1", "img/alpaka.png", "15th February - 17th February, 2019", 20)
 
 
 function drawContentPlaces() {
 	for (let index in placesData) {
-	document.getElementById("places").innerHTML += placesData[index].render();
+		document.getElementById("places").innerHTML += placesData[index].render();
 	}
 }
 
-function drawContentRestaurants () {
-
+function drawContentRestaurants() {
+	for (let index in restaurantData) {
+		document.getElementById("restaurants").innerHTML += restaurantData[index].render();
+	}
 }
 
-drawContentPlaces();
+// function drawContentRestaurants () {
+
+	// }
+
+	drawContentPlaces();
+	drawContentRestaurants();
+
 
 
 
