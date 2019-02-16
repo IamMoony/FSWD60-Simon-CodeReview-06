@@ -30,7 +30,7 @@ var places = /** @class */ (function (_super) {
         return _super.call(this, name, city, zipcode, address, image) || this;
     }
     places.prototype.render = function () {
-        return "\n\t\t" + _super.prototype.render.call(this) + "\n\t\t<div class=\"col-lg-12\">\n\t\t<div class=\"media\">\n\t\t<div class=\"media-left col-lg-3\">\n\t\t<a href=\"#\">\n\t\t<img class=\"media-object\" src=\"" + this.image + "\">\n\t\t</a>\n\t\t</div>\n\t\t<div class=\"media-body col-lg-2>\"\n\t\t<h5 class=\"media-heading\">" + this.name + "</5>\n\t\t<p>City:" + this.city + "</p>\n\t\t<p>ZIP-code:" + this.zipcode + "</p>\n\t\t<p>Address:" + this.address + "</p>\n\t\t</div>\n\t\t</div>\n\t\t</div>\n\t\t";
+        return "\n\t\t<div class=\"media col-lg-3\">\n  \t\t<div class=\"media-left \">\n    \t<a href=\"#\">\n      \t<img class=\"media-object\" src=\"" + this.image + "\" alt=\"...\">\n    \t</a>\n  \t\t</div>\n  \t\t<div class=\"media-body col-lg-3\">\n    \t<h4 class=\"media-heading\">" + this.name + "</h4>\n    \t<p>City: " + this.name + "</p>\n    \t<p>ZIP-Code: " + this.zipcode + "</p>\n    \t<p>Address: " + this.address + "</p>\n  \t\t</div>\n\t\t</div>\n\t\t";
     };
     return places;
 }(locations));
@@ -74,13 +74,13 @@ var events = /** @class */ (function (_super) {
 // test end
 //Data start
 var placesData = new Array();
-// name, city, zipcode, address, image
+// (name, city, zipcode, address, image)
 placesData[0] = new places("Eiffel Tower", "Paris", 75007, "5 avenue Anatole France", "img/eiffel.jpg");
 placesData[1] = new places("St. Stephens Cathedral", "Vienna, Austria", 1010, "Stephansplatz 3, 1010 Wien", "img/stephansdom.jpg");
 placesData[2] = new places("Chichen Itza", "Yucatán, Mexico", "unknown", "unknown", "img/mayatemple.jpg");
 placesData[3] = new places("Broadway Theatre", "New York City", 10036, "Theater District, Manhattan", "img/broadway.jpg");
 var restaurantData = new Array();
-// name, city, zipcode, address, image, tel, type, website
+// (name, city, zipcode, address, image, tel, type, website)
 restaurantData[0] = new restaurant("DO & CO Restaurant Stephansplatz", "Vienna, Austria", 1010, "Stephansplatz 12", "img/doco.jpg", "01 5353969", "Luxury", "https://www.docohotel.com/de/restaurant");
 restaurantData[1] = new restaurant("TGI Fridays", "Vienna, Austria", 1010, "Schubertring 13", "img/tgi.jpg", " 01 7148995", "Fast Food", "http://tgifridays.at/");
 restaurantData[2] = new restaurant("La Rive", "Amsterdam, Netherlands", 1018, "Professor Tulpplein 1", "img/rive.jpg", "+31 20 520 3264", "Upper Class", "https://www.restaurantlarive.nl/nl/");
@@ -99,6 +99,11 @@ function drawContentPlaces() {
 function drawContentRestaurants() {
     for (var index in restaurantData) {
         document.getElementById("restaurants").innerHTML += restaurantData[index].render();
+    }
+}
+function drawContentEvents() {
+    for (var index in restaurantData) {
+        document.getElementById("events").innerHTML += eventData[index].render();
     }
 }
 // function drawContentRestaurants () {

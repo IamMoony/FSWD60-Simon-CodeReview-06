@@ -26,21 +26,18 @@ class places extends locations {
 	}
 	render(){
 		return `
-		${super.render()}
-		<div class="col-lg-12">
-		<div class="media">
-		<div class="media-left col-lg-3">
-		<a href="#">
-		<img class="media-object" src="${this.image}">
-		</a>
-		</div>
-		<div class="media-body col-lg-2>"
-		<h5 class="media-heading">${this.name}</5>
-		<p>City:${this.city}</p>
-		<p>ZIP-code:${this.zipcode}</p>
-		<p>Address:${this.address}</p>
-		</div>
-		</div>
+		<div class="media col-lg-3">
+  		<div class="media-left ">
+    	<a href="#">
+      	<img class="media-object" src="${this.image}" alt="...">
+    	</a>
+  		</div>
+  		<div class="media-body col-lg-3">
+    	<h4 class="media-heading">${this.name}</h4>
+    	<p>City: ${this.name}</p>
+    	<p>ZIP-Code: ${this.zipcode}</p>
+    	<p>Address: ${this.address}</p>
+  		</div>
 		</div>
 		`
 	}
@@ -128,14 +125,14 @@ class events extends locations{
 
 //Data start
 var placesData = new Array();
-// name, city, zipcode, address, image
+// (name, city, zipcode, address, image)
 placesData[0] = new places("Eiffel Tower", "Paris",  75007, "5 avenue Anatole France", "img/eiffel.jpg")
 placesData[1] = new places("St. Stephens Cathedral", "Vienna, Austria",  1010, "Stephansplatz 3, 1010 Wien", "img/stephansdom.jpg")
 placesData[2] = new places("Chichen Itza", "Yucatán, Mexico",  "unknown", "unknown", "img/mayatemple.jpg")
 placesData[3] = new places("Broadway Theatre", "New York City",  10036, "Theater District, Manhattan", "img/broadway.jpg")
 
 var restaurantData = new Array();
-// name, city, zipcode, address, image, tel, type, website
+// (name, city, zipcode, address, image, tel, type, website)
 restaurantData[0] = new restaurant("DO & CO Restaurant Stephansplatz", "Vienna, Austria", 1010, "Stephansplatz 12", "img/doco.jpg", "01 5353969", "Luxury", "https://www.docohotel.com/de/restaurant")
 restaurantData[1] = new restaurant("TGI Fridays", "Vienna, Austria", 1010, "Schubertring 13", "img/tgi.jpg", " 01 7148995", "Fast Food", "http://tgifridays.at/")
 restaurantData[2] = new restaurant("La Rive", "Amsterdam, Netherlands", 1018, "Professor Tulpplein 1", "img/rive.jpg", "+31 20 520 3264", "Upper Class", "https://www.restaurantlarive.nl/nl/")
@@ -161,6 +158,14 @@ function drawContentRestaurants() {
 		document.getElementById("restaurants").innerHTML += restaurantData[index].render();
 	}
 }
+
+function drawContentEvents() {
+	for (let index in restaurantData) {
+		document.getElementById("events").innerHTML += eventData[index].render();
+	}
+}
+
+
 
 // function drawContentRestaurants () {
 
