@@ -62,11 +62,11 @@ class restaurant extends locations{
 	render(){
 		return `
 		${super.render()}
-		<div class="media col-lg-3 col-md-5 col-sm-1">
+		<div class="media col-lg-3 col-md-6 col-sm-12">
   		<div class="media-left d-none d-sm-block">
   		<hr>
     	<a href="${this.website}">
-      	<img class="media-object .d-sm-none .d-md-block" src="${this.image}" alt="...">
+      	<img class="media-object" src="${this.image}" alt="...">
     	</a>
     	<hr>
   		</div>

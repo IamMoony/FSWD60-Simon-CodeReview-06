@@ -95,3 +95,11 @@ hr {
         }
       }
 
+    @media (max-width:1200px) {
+
+      .media-left img 
+      {
+        width: 220px;
+        }
+      }
+
