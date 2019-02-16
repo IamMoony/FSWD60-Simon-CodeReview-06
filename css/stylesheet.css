@@ -3,7 +3,7 @@
 } */
 body {
     margin-top: 80px;
-    background-color: #659DBD;
+    background-color: #7395AE;
 }
 .jumbotron {
 	background-image: url('../img/travel2.jpg');
@@ -24,7 +24,7 @@ body {
     height: 220px;
     margin-top: 5%;
     text-align: center;
-    border: 3px solid #BC986A;
+    border: 3px solid #B1A296;
     border-radius: 10%;
     transition: transform .2s
 }
@@ -55,7 +55,7 @@ body {
 }
 
 .page-footer {
-	background-color: #DAAD86;
+	background-color: #B1A296;
 	border: 0px solid white;
 	border-radius: 5px;
 }
