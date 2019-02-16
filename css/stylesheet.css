@@ -3,7 +3,7 @@
 } */
 body {
 	margin-top: 80px;
-	background-color: lightgrey;
+	background-color: #659DBD;
 }
 
 img {
@@ -11,7 +11,7 @@ img {
 	height: 220px;
 	margin-top: 5%;
 	text-align: center;
-	border: 3px solid darkgoldenrod;
+	border: 3px solid #BC986A;
 	border-radius: 10%;
 	transition: transform .2s
 }
@@ -19,6 +19,19 @@ img {
 img:hover {
 	transform: scale(1.08);
 }
+
+.location-heading h2 {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.media-body h4 {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #FBEEC1;
+}
+
+
 
 
 
@@ -39,6 +52,12 @@ img:hover {
 hr {
 	height: 2px;
 	background-color: darkgray;
+}
+
+@media and screen (max-width: 450px) {
+	img {
+		border: 0px;
+	}
 }
 
 
