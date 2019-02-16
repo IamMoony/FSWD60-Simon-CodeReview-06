@@ -2,65 +2,75 @@
 	border: 1px solid red;
 } */
 body {
-	margin-top: 80px;
-	background-color: #659DBD;
+    margin-top: 80px;
+    background-color: #659DBD;
+}
+.jumbotron {
+	background-image: url('../img/travel2.jpg');
+	background-size: 100%;
 }
 
-img {
-	width: 100%;
-	height: 220px;
-	margin-top: 5%;
-	text-align: center;
-	border: 3px solid #BC986A;
-	border-radius: 10%;
-	transition: transform .2s
-}
-
-img:hover {
-	transform: scale(1.08);
+.media-left img:hover {
+    transform: scale(1.08);
 }
 
 .location-heading h2 {
-	font-size: 3em;
-	font-weight: bold;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.media-left img {
+    width: 100%;
+    height: 220px;
+    margin-top: 5%;
+    text-align: center;
+    border: 3px solid #BC986A;
+    border-radius: 10%;
+    transition: transform .2s
 }
 
 .media-body h4 {
-	font-size: 1.5em;
-	font-weight: bold;
-	color: #FBEEC1;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FBEEC1;
 }
 
+.media-body p {}
 
-
-
-
-/* .media-text {
-	padding-top: 20px;
-} */
 
 #places {
-	margin: 10px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
 }
+
 #restaurants {
-	margin: 10px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
 }
-#events{
-	margin: 10px 0px 10px 0px;
+
+#events {
+    margin: 10px 0px 10px 0px;
+}
+
+.cf-logo {
+	width: 50%;
+}
+
+.page-footer {
+	background-color: #DAAD86;
+	border: 0px solid white;
+	border-radius: 5px;
+}
+
+.page-footer li, a, h5, ul, p {
+	color: black;
 }
 
 hr {
-	height: 2px;
-	background-color: darkgray;
+    /* height: 2px; */
+   background-color: : #DAAD86;
 }
 
 @media and screen (max-width: 450px) {
-	img {
-		border: 0px;
-	}
+    img {
+        border: 0px;
+    }
 }
-
-
-
-
-
