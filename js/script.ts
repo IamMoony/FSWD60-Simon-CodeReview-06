@@ -35,7 +35,7 @@ class places extends locations {
     	</a>
     	<hr>
   		</div>
-  		<div class="media-body col-lg-1 col-md-1 media-text">
+  		<div class="media-body col-lg-12 col-md-1 col-sm-12 media-text">
     	<h4 class="media-heading media-text">${this.name}</h4>
     	<p><b>City:</b> ${this.city}</p>
     	<p><b>ZIP-Code:</b> ${this.zipcode}</p>
@@ -62,22 +62,22 @@ class restaurant extends locations{
 	render(){
 		return `
 		${super.render()}
-		<div class="media col-lg-3 col-md-5">
-  		<div class="media-left ">
+		<div class="media col-lg-3 col-md-5 col-sm-1">
+  		<div class="media-left d-none d-sm-block">
   		<hr>
     	<a href="${this.website}">
-      	<img class="media-object" src="${this.image}" alt="...">
+      	<img class="media-object .d-sm-none .d-md-block" src="${this.image}" alt="...">
     	</a>
     	<hr>
   		</div>
-  		<div class="media-body col-lg-1 col-md-1">
+  		<div class="media-body col-lg-12 col-md-1 col-sm-12">
     	<h4 class="media-heading media-text">${this.name}</h4>
     	<p><b>City:</b> ${this.city}</p>
     	<p><b>ZIP-Code:</b> ${this.zipcode}</p>
     	<p><b>Address:</b> <br>${this.address}</p>
     	<p><b>Tel.:</b>${this.tel}</p>
     	<p><b>Type: </b>${this.type}</p>
-    	<p><b>Website: </b><a href="${this.website}"$</a>${this.website}</p>
+    	<p><b>Website: </b><a href="${this.website}"$</a>${this.name}</p>
     	<hr>
   		</div>
 		</div>
@@ -99,7 +99,7 @@ class events extends locations{
 	render(){
 		return `
 		${super.render()}
-		<div class="media col-lg-3 col-md-6">
+		<div class="media col-lg-3 col-md-6 col-sm-12">
   		<div class="media-left ">
   		<hr>
     	<a href="${this.website}">
@@ -107,7 +107,7 @@ class events extends locations{
     	</a>
     	<hr>
   		</div>
-  		<div class="media-body col-lg-1 col-md-2">
+  		<div class="media-body col-lg-12 col-md-1 col-sm-12">
     	<h4 class="media-heading media-text">${this.name}</h4>
     	<p><b>City:</b> ${this.city}</p>
     	<p><b>ZIP-Code:</b> ${this.zipcode}</p>
@@ -146,10 +146,10 @@ placesData[3] = new places("Broadway Theatre", "New York City",  10036, "Theater
 
 var restaurantData = new Array();
 // (name, city, zipcode, address, image, tel, type, website) --> 8 arugments
-restaurantData[0] = new restaurant("DO & CO Restaurant", "Vienna, Austria", 1010, "Stephansplatz 12", "img/doco.jpg", "01 5353969", "Luxury", "www.docohotel.com")
-restaurantData[1] = new restaurant("TGI Fridays", "Vienna, Austria", 1010, "Schubertring 13", "img/tgi.jpg", " 01 7148995", "Fast Food", "www.tgifridays.at/")
-restaurantData[2] = new restaurant("La Rive", "Amsterdam, Netherlands", 1018, "Professor Tulpplein 1", "img/rive.jpg", "+31 20 520 3264", "Upper Class", "www.restaurantlarive.nl")
-restaurantData[3] = new restaurant("Schweizerhaus", "Vienna, Austria", 1020, "Prater 116", "img/schweizerhaus.jpg", "01 7148995", "Traditional Austrian Food", "www.schweizerhaus.at")
+restaurantData[0] = new restaurant("DO & CO Restaurant", "Vienna, Austria", 1010, "Stephansplatz 12", "img/doco.jpg", "01 5353969", "Luxury", "https://www.docohotel.com")
+restaurantData[1] = new restaurant("TGI Fridays", "Vienna, Austria", 1010, "Schubertring 13", "img/tgi.jpg", " 01 7148995", "Fast Food", "https://www.tgifridays.at/")
+restaurantData[2] = new restaurant("La Rive", "Amsterdam, Netherlands", 1018, "Professor Tulpplein 1", "img/rive.jpg", "+31 20 520 3264", "Upper Class", "https://www.restaurantlarive.nl")
+restaurantData[3] = new restaurant("Schweizerhaus", "Vienna, Austria", 1020, "Prater 116", "img/schweizerhaus.jpg", "01 7148995", "Traditional Austrian Food", "http://www.schweizerhaus.at")
 
 var eventData = new Array();
 

@@ -4,6 +4,7 @@
 body {
     margin-top: 80px;
     background-color: #7395AE;
+    font-family: 'Open Sans', sans-serif;
 }
 .jumbotron {
 	background-image: url('../img/travel2.jpg');
