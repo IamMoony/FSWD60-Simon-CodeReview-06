@@ -113,7 +113,7 @@ class events extends locations{
     	<p><b>ZIP-Code:</b> ${this.zipcode}</p>
     	<p><b>Address:</b> <br>${this.address}</p>
     	<p><b>Date</b> ${this.eventdate}</p>
-    	<p><b>Price:</b> ${this.ticketprice} $</p>
+    	<p><b>Price:</b> € ${this.ticketprice}</p>
   		</div>
 		</div>
 		`
