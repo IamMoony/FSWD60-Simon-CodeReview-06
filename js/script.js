@@ -30,7 +30,7 @@ var places = /** @class */ (function (_super) {
         return _super.call(this, name, city, zipcode, address, image) || this;
     }
     places.prototype.render = function () {
-        return "\n\t\t" + _super.prototype.render.call(this) + "\n\t\t<div class=\"media col-lg-3\">\n  \t\t<div class=\"media-left\">\n    \t<a href=\"#\">\n      \t<img class=\"media-object\" src=\"" + this.image + "\" alt=\"...\">\n    \t</a>\n  \t\t</div>\n  \t\t<div class=\"media-body col-lg-3 media-text\">\n    \t<h4 class=\"media-heading media-text\">" + this.name + "</h4>\n    \t<p>City: " + this.city + "</p>\n    \t<p>ZIP-Code: " + this.zipcode + "</p>\n    \t<p>Address: <br>" + this.address + "</p>\n  \t\t</div>\n\t\t</div>\n\t\t";
+        return "\n\t\t" + _super.prototype.render.call(this) + "\n\t\t<div class=\"media col-lg-3 col-md-6\">\n  \t\t<div class=\"media-left\">\n  \t\t<hr>\n    \t<a href=\"#\">\n      \t<img class=\"media-object\" src=\"" + this.image + "\" alt=\"...\">\n    \t</a>\n    \t<hr>\n  \t\t</div>\n  \t\t<div class=\"media-body col-lg-1 col-md-1 media-text\">\n    \t<h4 class=\"media-heading media-text\">" + this.name + "</h4>\n    \t<p>City: " + this.city + "</p>\n    \t<p>ZIP-Code: " + this.zipcode + "</p>\n    \t<p>Address: <br>" + this.address + "</p>\n  \t\t</div>\n\t\t</div>\n\t\t";
     };
     return places;
 }(locations));
@@ -44,7 +44,7 @@ var restaurant = /** @class */ (function (_super) {
         return _this;
     }
     restaurant.prototype.render = function () {
-        return "\n\t\t" + _super.prototype.render.call(this) + "\n\t\t<div class=\"media col-lg-3\">\n  \t\t<div class=\"media-left \">\n    \t<a href=\"#\">\n      \t<img class=\"media-object\" src=\"" + this.image + "\" alt=\"...\">\n    \t</a>\n  \t\t</div>\n  \t\t<div class=\"media-body col-lg-1\">\n    \t<h4 class=\"media-heading media-text\">" + this.name + "</h4>\n    \t<p>City: " + this.city + "</p>\n    \t<p>ZIP-Code: " + this.zipcode + "</p>\n    \t<p>Address: " + this.address + "</p>\n    \t<p>Tel.:" + this.tel + "</p>\n    \t<p>Type: " + this.type + "</p>\n    \t<p>Website: " + this.website + "</p>\n  \t\t</div>\n\t\t</div>\n\t\t";
+        return "\n\t\t" + _super.prototype.render.call(this) + "\n\t\t<div class=\"media col-lg-3 col-md-6\">\n  \t\t<div class=\"media-left \">\n  \t\t<hr>\n    \t<a href=\"" + this.website + "\">\n      \t<img class=\"media-object\" src=\"" + this.image + "\" alt=\"...\">\n    \t</a>\n    \t<hr>\n  \t\t</div>\n  \t\t<div class=\"media-body col-lg-1 col-md-1\">\n    \t<h4 class=\"media-heading media-text\">" + this.name + "</h4>\n    \t<p>City: " + this.city + "</p>\n    \t<p>ZIP-Code: " + this.zipcode + "</p>\n    \t<p>Address: <br>" + this.address + "</p>\n    \t<p>Tel.:" + this.tel + "</p>\n    \t<p>Type: " + this.type + "</p>\n    \t<p>Website: <a href=\"" + this.website + "\"$</a></p>\n  \t\t</div>\n\t\t</div>\n\t\t";
     };
     return restaurant;
 }(locations));
@@ -57,7 +57,7 @@ var events = /** @class */ (function (_super) {
         return _this;
     }
     events.prototype.render = function () {
-        return "\n\t\t" + _super.prototype.render.call(this) + "\n\t\t<div class=\"media col-lg-3\">\n  \t\t<div class=\"media-left \">\n    \t<a href=\"#\">\n      \t<img class=\"media-object\" src=\"" + this.image + "\" alt=\"...\">\n    \t</a>\n  \t\t</div>\n  \t\t<div class=\"media-body col-lg-1\">\n    \t<h4 class=\"media-heading media-text\">" + this.name + "</h4>\n    \t<p>City: " + this.city + "</p>\n    \t<p>ZIP-Code: " + this.zipcode + "</p>\n    \t<p>Address: <br>" + this.address + "</p>\n    \t<p>Date: " + this.eventdate + "</p>\n    \t<p>Price: " + this.ticketprice + "</p>\n  \t\t</div>\n\t\t</div>\n\t\t";
+        return "\n\t\t" + _super.prototype.render.call(this) + "\n\t\t<div class=\"media col-lg-3 col-md-6\">\n  \t\t<div class=\"media-left \">\n  \t\t<hr>\n    \t<a href=\"" + this.website + "\">\n      \t<img class=\"media-object\" src=\"" + this.image + "\" alt=\"...\">\n    \t</a>\n    \t<hr>\n  \t\t</div>\n  \t\t<div class=\"media-body col-lg-1 col-md-2\">\n    \t<h4 class=\"media-heading media-text\">" + this.name + "</h4>\n    \t<p>City: " + this.city + "</p>\n    \t<p>ZIP-Code: " + this.zipcode + "</p>\n    \t<p>Address: <br>" + this.address + "</p>\n    \t<p>Date: " + this.eventdate + "</p>\n    \t<p>Price: " + this.ticketprice + "</p>\n  \t\t</div>\n\t\t</div>\n\t\t";
     };
     return events;
 }(locations));
@@ -81,7 +81,7 @@ placesData[2] = new places("Chichen Itza", "Yucatán, Mexico", "unknown", "unkno
 placesData[3] = new places("Broadway Theatre", "New York City", 10036, "Theater District, Manhattan", "img/broadway.jpg");
 var restaurantData = new Array();
 // (name, city, zipcode, address, image, tel, type, website) --> 8 arugments
-restaurantData[0] = new restaurant("DO & CO Restaurant", "Vienna, Austria", 1010, "Stephansplatz 12", "img/doco.jpg", "01 5353969", "Luxury", "www.docohotel.com/de/restaurant");
+restaurantData[0] = new restaurant("DO & CO Restaurant", "Vienna, Austria", 1010, "Stephansplatz 12", "img/doco.jpg", "01 5353969", "Luxury", "www.docohotel.com");
 restaurantData[1] = new restaurant("TGI Fridays", "Vienna, Austria", 1010, "Schubertring 13", "img/tgi.jpg", " 01 7148995", "Fast Food", "www.tgifridays.at/");
 restaurantData[2] = new restaurant("La Rive", "Amsterdam, Netherlands", 1018, "Professor Tulpplein 1", "img/rive.jpg", "+31 20 520 3264", "Upper Class", "www.restaurantlarive.nl");
 restaurantData[3] = new restaurant("Schweizerhaus", "Vienna, Austria", 1020, "Prater 116", "img/schweizerhaus.jpg", "01 7148995", "Traditional Austrian Food", "www.schweizerhaus.at");
