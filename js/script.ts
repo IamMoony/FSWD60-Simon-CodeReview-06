@@ -37,9 +37,9 @@ class places extends locations {
   		</div>
   		<div class="media-body col-lg-1 col-md-1 media-text">
     	<h4 class="media-heading media-text">${this.name}</h4>
-    	<p>City: ${this.city}</p>
-    	<p>ZIP-Code: ${this.zipcode}</p>
-    	<p>Address: <br>${this.address}</p>
+    	<p><b>City:</b> ${this.city}</p>
+    	<p><b>ZIP-Code:</b> ${this.zipcode}</p>
+    	<p><b>Address:</b> <br>${this.address}</p>
     	<hr>
   		</div>
 		</div>
@@ -109,11 +109,11 @@ class events extends locations{
   		</div>
   		<div class="media-body col-lg-1 col-md-2">
     	<h4 class="media-heading media-text">${this.name}</h4>
-    	<p>City: ${this.city}</p>
-    	<p>ZIP-Code: ${this.zipcode}</p>
-    	<p>Address: <br>${this.address}</p>
-    	<p>Date: ${this.eventdate}</p>
-    	<p>Price: ${this.ticketprice} $</p>
+    	<p><b>City:</b> ${this.city}</p>
+    	<p><b>ZIP-Code:</b> ${this.zipcode}</p>
+    	<p><b>Address:</b> <br>${this.address}</p>
+    	<p><b>Date</b> ${this.eventdate}</p>
+    	<p><b>Price:</b> ${this.ticketprice} $</p>
   		</div>
 		</div>
 		`
