@@ -102,7 +102,7 @@ class events extends locations{
 		<div class="media col-lg-3 col-md-6 col-sm-12">
   		<div class="media-left ">
   		<hr>
-    	<a href="${this.website}">
+    	<a href="#">
       	<img class="media-object" src="${this.image}" alt="...">
     	</a>
     	<hr>
