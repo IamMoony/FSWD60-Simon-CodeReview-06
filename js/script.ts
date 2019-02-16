@@ -27,11 +27,11 @@ class places extends locations {
 	render(){
 		return `
 		${super.render()}
-		<div class="media col-lg-3 col-md-6">
+		<div class="media col-lg-3 col-md-6 col-sm-12">
   		<div class="media-left">
   		<hr>
     	<a href="#">
-      	<img class="media-object" src="${this.image}" alt="...">
+      	<img class="media-object" src="${this.image}">
     	</a>
     	<hr>
   		</div>
@@ -62,7 +62,7 @@ class restaurant extends locations{
 	render(){
 		return `
 		${super.render()}
-		<div class="media col-lg-3 col-md-6">
+		<div class="media col-lg-3 col-md-5">
   		<div class="media-left ">
   		<hr>
     	<a href="${this.website}">
@@ -72,12 +72,12 @@ class restaurant extends locations{
   		</div>
   		<div class="media-body col-lg-1 col-md-1">
     	<h4 class="media-heading media-text">${this.name}</h4>
-    	<p>City: ${this.city}</p>
-    	<p>ZIP-Code: ${this.zipcode}</p>
-    	<p>Address: <br>${this.address}</p>
-    	<p>Tel.:${this.tel}</p>
-    	<p>Type: ${this.type}</p>
-    	<p>Website: <a href="${this.website}"$</a></p>
+    	<p><b>City:</b> ${this.city}</p>
+    	<p><b>ZIP-Code:</b> ${this.zipcode}</p>
+    	<p><b>Address:</b> <br>${this.address}</p>
+    	<p><b>Tel.:</b>${this.tel}</p>
+    	<p><b>Type: </b>${this.type}</p>
+    	<p><b>Website: </b><a href="${this.website}"$</a>${this.website}</p>
     	<hr>
   		</div>
 		</div>
@@ -179,11 +179,12 @@ function drawContentEvents() {
 }
 
 
-
+document.addEventListener("DOMContentLoaded", function(){
 	drawContentPlaces();
 	drawContentRestaurants();
 	drawContentEvents();
 
+});
 
 
 
